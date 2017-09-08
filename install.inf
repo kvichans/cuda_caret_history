@@ -1,8 +1,8 @@
 [info]
-title=Cursor_History
-desc=Commands to restore position of caret or selection
+title=Caret History
+desc=Tracks caret pos changing (only long jumps), and allows to jump backward/forward by that history
 type=cudatext-plugin
-subdir=cuda_curshist
+subdir=cuda_caret_history
 homepage=https://github.com/kvichans/cuda_caret_history
 
 [item1]
@@ -11,11 +11,11 @@ events=on_caret,on_close
 
 [item3]
 section=commands
-caption=CursorHistory move backward
+caption=Caret History\Jump backward
 method=move_backward
 
 [item4]
 section=commands
-caption=CursorHistory move forward
+caption=Caret History\Jump forward
 method=move_forward
 
