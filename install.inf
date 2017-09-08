@@ -1,0 +1,21 @@
+[info]
+title=Cursor_History
+desc=Commands to restore position of caret or selection
+type=cudatext-plugin
+subdir=cuda_curshist
+homepage=https://github.com/kvichans/cuda_caret_history
+
+[item1]
+section=events
+events=on_caret,on_close
+
+[item3]
+section=commands
+caption=CursorHistory move backward
+method=move_backward
+
+[item4]
+section=commands
+caption=CursorHistory move forward
+method=move_forward
+

@@ -1,0 +1,6 @@
+1.0.02 (2017-08-15)
+added: opt curshist_gap_size
+added: opt curshist_max_history
+
+1.0.0 (2017-08-15)
+init = fork github.com/eastorwest/CudaText-CursorHistory
