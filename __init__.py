@@ -6,7 +6,7 @@ Authors:
     github.com/eastorwest
     Andrey Kvichansky    (kvichans on github.com)
 Version:
-    '1.0.02 2017-08-15'
+    '1.0.03 2017-09-13'
 ToDo: (see end of file)
 '''
 
@@ -17,14 +17,15 @@ import  cudatext            as app
 from    cudatext        import ed
 import  cudax_lib           as apx
 
-pass;                           LOG = (-1==-1)  # Do or dont logging.
-from    cudax_lib       import  log
+pass;                           LOG = (-1== 1)  # Do or dont logging.
+pass;                           from cudax_lib import log
+
+GAP_SIZE    = apx.get_opt('carethistory_gap_size'   , apx.get_opt('curshist_gap_size'  , 10))   # Минимальное отличие по строкам (y) от предыдущего значения для сохранения
+HIST_MAX    = apx.get_opt('carethistory_max_history', apx.get_opt('curshist_max_history', 5))   # Максимальный размер истории для каждого таба
+#SAVE_HIST  = apx.get_opt('carethistory_save_history', False)
+#CFG_JSON   = app.app_path(app.APP_DIR_SETTINGS)+os.sep+'cuda_carethistory.json'
 
 HistItem    = namedtuple('HistItem', ['x', 'y', 'x_', 'y_'])    # x/y - caret, x_/y_ - end of selection (-1/-1 if no sel)
-GAP_SIZE    = apx.get_opt('curshist_gap_size', 10)              # Минимальное отличие по строкам (y) от предыдущего значения для сохранения
-HIST_MAX    = apx.get_opt('curshist_max_history', 5)            # Максимальный размер истории для каждого таба
-#SAVE_HIST   = apx.get_opt('curshist_save_history', False)
-#CFG_JSON    = app.app_path(app.APP_DIR_SETTINGS)+os.sep+'cuda_curshist.json'
 
 class Command:
     history = {}        # {tab_id:([HistItem])}

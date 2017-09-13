@@ -1,3 +1,7 @@
+1.0.03 (2017-09-13)
+added: opt carethistory_gap_size
+added: opt carethistory_max_history
+
 1.0.02 (2017-08-15)
 added: opt curshist_gap_size
 added: opt curshist_max_history
