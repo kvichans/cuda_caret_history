@@ -6,7 +6,7 @@ Authors:
     github.com/eastorwest
     Andrey Kvichansky    (kvichans on github.com)
 Version:
-    '1.0.03 2017-09-13'
+    '1.0.04 2023-05-03'
 ToDo: (see end of file)
 '''
 
@@ -47,7 +47,7 @@ class Command:
             del self.history[tab_id]
             del self.poses[  tab_id]
     
-    def on_caret(self, ed_self):
+    def on_caret_slow(self, ed_self):
         if self.skip_rec:
             self.skip_rec = False
             return 
@@ -69,7 +69,7 @@ class Command:
                 , self.poses[  tab_id]
         
         pre_item= hist[pos]
-        if abs(pre_item.y - new_item.y) > GAP_SIZE:
+        if abs(pre_item.y - new_item.y) >= GAP_SIZE:
             # Дальний скачок
             # - Начать новое наращивание истории
             # - Запомнить текущую каретку (или выделение) для последующего перехода

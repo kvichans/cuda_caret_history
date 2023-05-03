@@ -7,7 +7,7 @@ homepage=https://github.com/kvichans/cuda_caret_history
 
 [item1]
 section=events
-events=on_caret,on_close
+events=on_caret_slow,on_close
 
 [item3]
 section=commands
