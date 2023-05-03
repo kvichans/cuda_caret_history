@@ -47,7 +47,7 @@ class Command:
             del self.history[tab_id]
             del self.poses[  tab_id]
     
-    def on_caret_slow(self, ed_self):
+    def on_caret(self, ed_self):
         if self.skip_rec:
             self.skip_rec = False
             return 

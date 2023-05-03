@@ -1,5 +1,4 @@
 1.0.04 (2023-05-03)
-change: on_caret event changed to on_caret_slow
 added: plugin detects changes in one long line, with carethistory_gap_size=0 (by @pintassilgo)
 
 1.0.03 (2017-09-13)
