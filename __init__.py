@@ -69,7 +69,8 @@ class Command:
                 , self.poses[  tab_id]
         
         pre_item= hist[pos]
-        if abs(pre_item.y - new_item.y) >= GAP_SIZE:
+        if (abs(pre_item.y - new_item.y) > GAP_SIZE) or \
+           ((GAP_SIZE == 0) and (pre_item.y == new_item.y) and abs(pre_item.x - new_item.x)>1):
             # Дальний скачок
             # - Начать новое наращивание истории
             # - Запомнить текущую каретку (или выделение) для последующего перехода
