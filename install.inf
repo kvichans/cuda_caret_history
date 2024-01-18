@@ -1,5 +1,5 @@
 [info]
-title=CaretHistory
+title=Caret History
 desc=Tracks caret pos changing (only long jumps), and allows to jump backward/forward by that history
 type=cudatext-plugin
 subdir=cuda_caret_history
